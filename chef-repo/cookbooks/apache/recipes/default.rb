@@ -15,8 +15,8 @@ cookbook_file "/var/www/html/index.html" do
               source "index.html"
 end
 
-template "etc/shivaram" do
-          source "temp.erb"
+template "/etc/chandu" do
+         source "temp.erb"
 end
 
 service "httpd" do
