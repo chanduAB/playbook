@@ -1,0 +1,6 @@
+default["chandu"]["osfamily"] = "RedHat"
+default["chandu"]["ipaddress"] = "192.168.199.135"
+default["chandu"]["supports"] = "any"
+default["chandu"]["hostname"] = "chandu.abc.com"
+default["chandu"]["home"] = "/home/chandu"
+default["chandu"]["version"] = "0.0.1"
