@@ -1,0 +1,13 @@
+---
+- hosts: appserver
+  user: root
+  vars:
+     password: $1$WhNHs6fR$7admkqCoPN6Sfw24rb80U1
+  tasks:
+      - name: creating multiple users with same password
+        user: name={{item}} password={{password}} groups=users
+        with_items:
+                - sampath
+                - sandeep
+                - priya
+                - gayathri

@@ -1,0 +1,12 @@
+---
+- hosts: appserver
+  user: root
+  sudo: yes
+  tasks:
+     - name: stop the catalina
+       command: nohup /root/apache-tomcat-7.0.70/bin/catalina.sh stop
+     - name: copy the sample war into webapps
+       copy: src=sample.war dest=/root/apache-tomcat-7.0.70/webapps
+     - name: start the catalina
+       command: nohup /root/apache-tomcat-7.0.70/bin/catalina.sh start
+

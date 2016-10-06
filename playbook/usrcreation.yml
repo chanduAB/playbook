@@ -1,0 +1,9 @@
+---
+- hosts: appserver
+  user: root
+  vars:
+     name: aditya
+     password: $1$WhNHs6fR$7admkqCoPN6Sfw24rb80U1
+  tasks:
+     - name: creating the users
+       user: name={{name}} password={{password}} groups=users

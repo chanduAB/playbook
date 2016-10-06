@@ -1,0 +1,10 @@
+---
+- hosts: appserver
+  user: root
+  tasks:
+   #   - name: upgrade software on {{inventory_hostname}}
+ #     - name: current host is {{ansible_hostname}}
+  #      action: current host is {{ansible_hostname}}
+ #       register: result
+      - name: current host is {{ansible_hostname}}
+        debug: var=ansible_hostname

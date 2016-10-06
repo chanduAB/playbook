@@ -1,0 +1,7 @@
+---
+- hosts: appserver
+  user: root
+  tasks:
+      - name: i need to change selinux disable in managing system
+        lineinfile: dest=/etc/sysconfig/selinux state=present create=yes regexp='SELINUX=.*' line='SELINUX=disabled'
+
